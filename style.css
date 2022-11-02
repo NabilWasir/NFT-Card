@@ -1,0 +1,188 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --color-cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --color-white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--very-dark-blue-main-bg);
+}
+
+.card {
+    background-color: var(--very-dark-blue-card-bg);
+    width: 260px;
+    height: 440px;
+    border-radius: 10px;
+}
+
+.card-image {
+    position: relative;
+    width: 225px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 18px 0 0 18px;
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-cyan);
+    position: absolute;
+    width: 225px;
+    height: 225px;
+    border-radius: 10px;
+    top: 122px;
+    opacity: 0;
+}
+
+@media screen and (min-width:1024px) {
+    .overlay {
+        top: 75px;
+        left: 613px;
+        width: 313px;
+        height: 314px;
+    }
+}
+
+.overlay:hover {
+    opacity: 0.4;
+    transition: 800ms;
+    cursor: pointer;
+}
+
+.info {
+    margin: 10px 0 0 20px;
+}
+
+.heading {
+    font-size: 1.3rem;
+    color: var(--color-white);
+    text-align: left;
+}
+
+.heading:hover {
+    color: var(--color-cyan);
+    cursor: pointer;
+    transition: 800ms;
+}
+
+.description {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: var(--soft-blue);
+}
+
+.price-time {
+    display: flex;
+}
+
+.price {
+    margin-top: 15px;
+    display: flex;
+}
+
+.price p {
+    color: var(--color-cyan);
+    margin-left: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.time {
+    display: flex;
+    margin: 15px 0 0 40px;
+}
+
+.time p {
+    margin: 0 0 0 5px;
+    color: var(--soft-blue);
+    font-size: 0.9rem;
+}
+
+.time-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.line {
+    color: var(--very-dark-blue-line);
+    width: 225px;
+    border: 0.1px;
+    border-style: solid;
+    margin-top: 15px;
+}
+
+.creator {
+    display: flex;
+    margin-top: 10px;
+}
+
+.creator-image {
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    border: 1px solid hsl(0, 0%, 100%);
+}
+
+.creator-info {
+    margin: 8px 0 0 10px;
+    font-size: 0.9rem;
+    color: var(--soft-blue);
+}
+
+.creator-info b {
+    font-weight: normal;
+    color: var(--color-white);
+}
+
+.creator-info b:hover {
+    color: var(--color-cyan);
+    cursor: pointer;
+    transition: 800ms;
+}
+
+footer {
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    font-size: 0.7rem;
+    margin: 0 70px;
+}
+
+@media screen and (min-width:1024px) {
+    footer {
+        bottom: 18px;
+    }
+}
+
+.attribution {
+    color: var(--color-white);
+}
+
+.attribution a {
+    color: var(--color-cyan);
+}
+
+@media screen and (min-width:1024px) {
+    .card {
+        transform: scale(1.4);
+    }
+}
