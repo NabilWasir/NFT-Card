@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 100vh;
     background-color: var(--very-dark-blue-main-bg);
     position: relative;
 }
